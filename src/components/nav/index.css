@@ -1,0 +1,128 @@
+.nav-main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 5px 5px 5px #dad9d988;
+    font-family: var(--en-font);
+    margin-block-end: 55px;
+}
+
+.nav-main-ar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 5px 5px 5px #dad9d988;
+    font-family: var(--ar-font);
+    margin-block-end: 55px;
+}
+
+
+.logo-container{
+    height: 2.2rem;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 15px;
+    width: 45%;
+}
+.logo-container .logo-text{
+    background: none;
+    color: var(--main-text);
+    font-size: xx-large;
+    font-family: var(--en-font);
+}
+.logo-container .logo-text span{
+    background: none;
+    color: var(--secondry-BG);
+}
+
+.logo-container img{
+    width: 45px;
+    height: 45px;
+
+}
+
+.nav-main-ar .list-container,.nav-main .list-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 45%;
+}
+
+.nav-main-ar .list-container{
+    direction: rtl;
+}
+
+.list-container .headers-list{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-inline-end: 25px;
+    margin-block-start: 20px;
+}
+
+
+
+.list-container .headers-list a:hover{
+    color: var(--secondry-BG);
+    
+}
+
+.list-container .headers-list a{
+    font-weight: bold;
+    cursor: pointer;
+    font-size: large;
+    text-decoration: none;
+    color: var(--main-text);
+} 
+
+.lang-list{
+    width: 10%;
+    height: 25px;
+}
+.lang-list .lang{
+    width: 25px;
+    height: 100%;
+    cursor: pointer;
+    margin-block-start: 5px;
+}
+
+
+
+@media only screen and (max-width: 1300px) {
+    .logo-container{
+        width: 30%;
+    }
+    .logo-container img{
+        width: 30px;
+        height: 30px;
+    }
+    .logo-container .logo-text {
+        font-size: large;
+    }
+    .nav-main .list-container,.nav-main-ar .list-container{
+        width: 60%;
+    }
+    .nav-main .list-container .headers-list a,.nav-main-ar .list-container .headers-list a{
+        font-size: small;
+    }
+    
+}
+
+@media only screen and (max-width:750px)  {
+        .nav-main .list-container,.nav-main-ar .list-container{
+            display: none;
+        }
+        
+        .lang-list .lang{
+            margin-block-start: 0;
+        }
+}

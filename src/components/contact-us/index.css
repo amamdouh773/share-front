@@ -1,0 +1,124 @@
+.contact-container,
+.contact-container-ar {
+    margin-block-end: 150px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.contact-container {
+    direction: ltr;
+    font-family: var(--en-font);
+    align-items: center;
+}
+
+.contact-container-ar {
+    direction: rtl;
+    font-family: var(--ar-font);
+}
+
+.text-container {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-inline-start: 250px;
+    color: var(--secondry-BG);
+}
+
+
+
+.text-container .header {
+    margin-block-end: 20px;
+    background-color: var(--secondry-BG);
+    padding: 20px;
+    border-radius: 15px;
+    color: var(--main-BG);
+    font-size: x-large;
+}
+
+.text-container p {
+    font-size: large;
+    line-height: 2.25;
+}
+
+.contact-container .text-container p {
+    font-size: medium;
+    line-height: 1.75;
+}
+
+.form-container {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-inline-end: 150px;
+    margin-inline-start: 150px;
+}
+
+
+.form-container .form-element {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-block-end: 50px;
+}
+
+.form-container .form-element .form-label {
+    color: var(--secondry-BG);
+    margin-inline-end: 15px;
+    font-size: x-large;
+    min-width: 150px;
+}
+
+.contact-container .form-container .form-element .form-label {
+    min-width: 250px;
+}
+
+.form-container .form-element .form-input {
+    width: 350px;
+    height: 35px;
+    border: 1px solid var(--secondry-BG);
+    border-radius: 7px;
+    margin-inline-start: 15px;
+    outline: none;
+}
+
+
+.form-container .main-btn,
+.form-container .main-btn-ar {
+    width: 350px;
+    height: 40px;
+    font-size: large;
+    font-family: var(--ar-font);
+}
+
+
+.form-container .main-btn{
+    font-family: var(--en-font);
+    margin-inline-start: 150px;
+}
+
+.form-container .main-btn-ar{
+    font-family: var(--ar-font);
+    margin-inline-start: 50px;
+}
+
+.contact-header,
+.contact-sub-header,
+.contact-details {
+    background-color: transparent;
+}
+
+
+@media only screen and (max-width:1300px) {
+    .contact-container,.contact-container-ar{
+        display: none;
+    }
+}

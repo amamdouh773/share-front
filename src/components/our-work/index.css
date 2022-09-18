@@ -1,0 +1,22 @@
+.work-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.work-header,.work-header-ar{
+    color: var(--main-BG);
+    font-family: var(--en-font);
+    font-size: x-large;
+    margin-block-end: 35px;
+    border: 3px solid var(--secondry-BG);
+    background-color: var(--secondry-BG);
+    padding: 10px;
+    border-radius: 30px;
+    width: 20%;
+}
+.work-header-ar{
+    font-family: var(--ar-font);
+}
