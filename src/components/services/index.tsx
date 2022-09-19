@@ -4,51 +4,30 @@ import { langContext } from "../../helper/context"
 import './index.css'
 import { useContext } from "react"
 import { useTranslation } from "react-i18next"
+import {useQuery} from "react-query"
+import axios from "axios"
 
 const Services = () => {
-    const servicesList = [
-        {
-            name: "Facebook ads",
-            logo: "./resources/images/facebook-ads.png"
-        },
-        {
-            name: "Google ads",
-            logo: "./resources/images/google-ads.png"
-        }, {
-            name: "Snapchat ads",
-            logo: "./resources/images/snapchat-ads.png"
-        }, {
-            name: "Tiktok ads",
-            logo: "./resources/images/tik-tok-ads.png"
-        },
-        {
-            name: "Logo & corporate identity",
-            logo: "./resources/images/branding.png"
-        },
-        {
-            name: "Catalogue, brochure & qr code",
-            logo: "./resources/images/brochure.png"
-        }, {
-            name: "Videography",
-            logo: "./resources/images/videography.png"
-        }, {
-            name: "Commercial photography",
-            logo: "./resources/images/photography.png"
-        },
-        {
-            name: "Motiongraphic and animation videos",
-            logo: "./resources/images/3d-movie.png"
-        }
-    ]
     const {lang} = useContext(langContext)
     const{t} = useTranslation()
+    const {isLoading,error,data} = useQuery("services",()=>
+        axios(`https://share-agency.herokuapp.com/api/rest/services`,
+            {
+                headers:{
+                    "content-type":"application/json",
+                    "x-hasura-admin-secret":"Ahmed2771995"
+                }
+            }
+        )
+    )
+    
+    if(isLoading) return <h1>loading...</h1>
+    if(error) return <h1>Error Try again</h1>
     return (
         <div className={lang ? "services-container-ar":"services-container"}>
             <h3 className="services-header">{t("services")}</h3>
             <div className="cards-container">
-                {servicesList.map((serv, i) => (
-                    <Card name={t(serv.name)} key={i} icon={serv.logo} />
-                ))}
+                {data?.data.services.map((serv,i)=><Card name={t(serv.name)} key={i} icon={serv.logo} />)}
             </div>
         </div>
     )

@@ -1,75 +1,45 @@
 import React, {  useCallback, useEffect, useMemo, useState } from "react"
 import './index.css'
-const companies = [{
-    "name": "Casa Developments",
-    "logo": "./resources/images/company1.jpeg"
-},
-{
-    "name": "Colors Shutter",
-    "logo": "./resources/images/company2.jpeg"
-},
-{
-    "name": "Arkadia Wedding Hall",
-    "logo": "./resources/images/company3.jpeg"
-},
-{
-    "name": "AlQasr",
-    "logo": "./resources/images/company4.jpeg"
-},
-{
-    "name": "SOX Fashion",
-    "logo": "./resources/images/company5.jpeg"
-},
-{
-    "name": "Usama & Mahmoud",
-    "logo": "./resources/images/company6.jpeg"
-},
-{
-    "name": "مركز المصطفى",
-    "logo": "./resources/images/company7.jpeg"
-},
-{
-    "name": "Lahloba",
-    "logo": "./resources/images/company8.jpeg"
-},
-{
-    "name": "المركز الفني لخدمة الديزل",
-    "logo": "./resources/images/company9.jpeg"
-},
-{
-    "name": "c.N.c",
-    "logo": "./resources/images/company10.jpeg"
-},
-{
-    "name": "Mshmsh Neon",
-    "logo": "./resources/images/company11.jpeg"
-},
-{
-    "name": "Century 22",
-    "logo": "./resources/images/company12.jpeg"
-}]
-
+import {useQuery} from "react-query"
+import axios from "axios"
 const Slider = () => {
-    const [minIndex, setMin] = useState(companies.length - 1)
+
+    const {isLoading,error,data} = useQuery("companies",()=>
+        axios(`https://share-agency.herokuapp.com/api/rest/companies`,
+            {
+                headers:{
+                    "content-type":"application/json",
+                    "x-hasura-admin-secret":"Ahmed2771995"
+                }
+            }
+        )
+    )
+
+    
+    const [minIndex, setMin] = useState(data?.data.companies.length - 1)
     const [maxIndex, setMax] = useState(4)
-    const activeCompanies = useMemo(() => companies.slice(0, 4), [])
+    const activeCompanies = useMemo(() => data?.data.companies.slice(0, 4), [data?.data.companies])
     const next = useCallback(() => {
-        maxIndex === companies.length - 1 ? setMax(0) : setMax(maxIndex + 1)
-        minIndex === companies.length - 1 ? setMin(0) : setMin(minIndex + 1)
+        maxIndex === data?.data.companies.length - 1 ? setMax(0) : setMax(maxIndex + 1)
+        minIndex === data?.data.companies.length - 1 ? setMin(0) : setMin(minIndex + 1)
         activeCompanies.shift()
-        activeCompanies.push(companies[maxIndex])
-    }, [setMax, setMin, activeCompanies, maxIndex, minIndex])
+        activeCompanies.push(data?.data.companies[maxIndex])
+    }, [setMax, setMin, activeCompanies,data?.data.companies, maxIndex, minIndex])
     const prev = useCallback(() => {
-        maxIndex === 0 ? setMax(companies.length - 1) : setMax(maxIndex - 1)
-        minIndex === 0 ? setMin(companies.length - 1) : setMin(minIndex - 1)
+        maxIndex === 0 ? setMax(data?.data.companies.length - 1) : setMax(maxIndex - 1)
+        minIndex === 0 ? setMin(data?.data.companies.length - 1) : setMin(minIndex - 1)
         activeCompanies.pop()
-        activeCompanies.unshift(companies[minIndex])
-    }, [setMax, setMin, activeCompanies, maxIndex, minIndex])
+        activeCompanies.unshift(data?.data.companies[minIndex])
+    }, [setMax, setMin, activeCompanies,data?.data.companies, maxIndex, minIndex])
     useEffect(()=>{
         const intervalId = setInterval(next, 3000);
 
         return () => clearInterval(intervalId)
     }, [next])
+
+    if(isLoading) return <h1>Loading</h1>
+    if(error) return <h1>Error</h1>
+
 
     return (
         <div className="slider-container">
