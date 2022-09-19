@@ -26,15 +26,23 @@
 
 .main-btn,.main-btn-ar{
   background: none;
+  background-color: var(--secondry-BG);
   border:2px solid var(--secondry-BG);
-  color: var(--secondry-BG);
+  color: var(--main-BG);
   border-radius: 3px;
   cursor: pointer;
+  font-family: var(--ar-font);
+  text-decoration: none;
 }
 
+.main-btn{
+  font-family: var(--en-font);
+}
+
+
 .main-btn:hover,.main-btn-ar:hover{
-  background-color: var(--secondry-BG);
-  color: var(--main-BG);
+  background-color: var(--main-BG);
+  color: var(--secondry-BG);
 }
 
 

@@ -12,7 +12,7 @@ const Nav = () => {
     return (
         <div className={lang ? "nav-main-ar" : "nav-main"}>  
             <div className="logo-container">
-                <h2 className="logo-text">Share<span>Agency</span></h2>
+                <h2 className="logo-text">Share<span>Advertising</span></h2>
                 <img src=".\resources\images\logo-share-2.png" alt="logo" />
             </div>
             <div className="list-container">
@@ -22,9 +22,12 @@ const Nav = () => {
                     <Link to="/services">{t("services")}</Link>
                     <Link to="/work">{t("work")}</Link>
                     <Link to="/contact">{t("contact")}</Link>
+                    <Link to="/" className={lang ? "main-btn-ar":"main-btn"}>{t("login")}</Link>
                 </ul>
             </div>
+            
             <div className="lang-list">
+                
                 <img src={lang ? "./resources/images/egypt.png" : "./resources/images/united-kingdom.png"} alt="Lang"
                     onClick={() => {
                         setLang(!lang)

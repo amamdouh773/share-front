@@ -2,10 +2,13 @@ import React, { useContext } from "react"
 import { useTranslation } from "react-i18next"
 import './index.css'
 import { langContext } from "../../helper/context.js"
+import{Link} from "react-router-dom"
 
 const Home = () =>{
     const {t} = useTranslation()
     const {lang} = useContext(langContext)
+    
+
     return(
         <div className= {lang ? "home-container-ar": "home-container" }>
             <div className="video-container">
@@ -15,7 +18,7 @@ const Home = () =>{
                 <p className={lang?"description-ar":"description"}>
                     {t("home-text")}
                 </p>
-                <button className={lang? "main-btn-ar":"main-btn"}>{t("contact")}</button>
+                <Link to="/contact" className={lang? "main-btn-ar":"main-btn"}>{t("contact")}</Link>
             </div>
         </div>
     )
