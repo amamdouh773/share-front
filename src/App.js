@@ -3,7 +3,6 @@ import './App.css';
 import Nav from './components/nav/index.tsx';
 import Main from './Pages/main/index.tsx';
 import AboutPage from './Pages/about-us-page/index.tsx';
-import Work from './components/our-work/index.tsx';
 import Contact from './components/contact-us/index.tsx';
 import Footer from './components/footer/index.tsx';
 import ServicesPage from './Pages/services-page/index.tsx';
@@ -15,6 +14,7 @@ import {
   Switch,
   Route
 } from "react-router-dom"
+import WorkPage from './Pages/work-page/index.tsx';
 function App() {
   const [lang, setLang] = useState(true)
   const queryClient = new QueryClient()
@@ -35,7 +35,7 @@ function App() {
                 <ServicesPage />
               </Route>
               <Route path="/work" >
-                <Work />
+                <WorkPage />
               </Route>
               <Route path="/contact" >
                 <Contact />

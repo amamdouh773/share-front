@@ -1,0 +1,26 @@
+.services{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.services-cards,.services-cards-ar{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.services-cards{
+    font-family: var(--en-font);
+}
+
+.services-cards-ar{
+    font-family: var(--ar-font);
+}
+
+.services .services-cards .card-container .desc{
+    margin-block: 5px;
+}

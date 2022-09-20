@@ -42,7 +42,7 @@
 
  .description-container .main-btn-ar{
     width: 30%;
-    height: 35px;
+    height: 25px;
     font-size: large;
     font-family: var(--ar-font);
     padding: 5px;
@@ -50,10 +50,10 @@
 
  .description-container .main-btn{
     width: 30%;
-    height: 45px;
+    height: 25px;
     font-size: large;
     font-family: var(--en-font);
-    
+    padding: 5px;
 }
 
 @media only screen and (max-width:1300px) {
@@ -84,5 +84,8 @@
         width: 100%;
         margin-inline-start: 0px;
         margin-block-start: 15px;
+    }
+    .video-container .video{
+        height: 100%;
     }
 }

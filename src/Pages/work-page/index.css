@@ -1,0 +1,46 @@
+.work{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.work h3{
+    font-size: larger;
+    background: none;
+    color: var(--main-text);
+    width: 20%;
+    border-color: var(--main-text);
+}
+
+.work .work-cards{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+.work .card-container {
+    background-color: #fefefe;
+    height: 100%;
+    cursor: pointer;
+}
+
+.work .card-container .name{
+    margin-block-end: 25px;
+    color: var(--main-text);
+}
+
+.work .card-container .icon{
+    width: 150px;
+    height: 150px;
+}
+
+@media only screen and (max-width:750px) {
+    .work h3{
+        width: 30%;
+    }
+}

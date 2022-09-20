@@ -19,9 +19,17 @@
 .card-container .name{
     background-color: transparent;
     color: var(--main-BG);
-    font-size: x-large;
+    font-size: large;
     margin-inline: 15px;
     margin-block-start: 5px;
+}
+
+.card-container .desc{
+    background: none;
+    color: var(--main-BG);
+    font-size: medium;
+    margin-block: 10px;
+    font-family: var(--ar-font);
 }
 
 @media only screen and (max-width: 1300px) {

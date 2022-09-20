@@ -20,3 +20,10 @@
 .work-header-ar{
     font-family: var(--ar-font);
 }
+
+
+@media only screen and (max-width:750px) {
+    .work-container h3{
+        font-size: large;
+    }
+}

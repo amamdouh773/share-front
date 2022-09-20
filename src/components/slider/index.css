@@ -53,14 +53,12 @@ img{
 }
 
 @media only screen and (max-width:750px) {
-    .work-container h3{
-        font-size: large;
-    }
+    
     .work-container .companies{
         justify-content: flex-start;
 
     }
     .work-container .companies .company{
-        margin-inline: 25px;
+        margin-inline: 50px;
     }
 }

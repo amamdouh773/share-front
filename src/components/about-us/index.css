@@ -62,7 +62,11 @@
         margin-inline-start: 0;
         width: 100%;
         border-radius: 0px;
-    }   
+    }
+    
+    .about-container .video{
+        height: 100%;
+    }
     .about-container .circle h3{
         font-size: large;
         padding-block-start: 30px;

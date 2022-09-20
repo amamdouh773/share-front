@@ -1,4 +1,4 @@
-.nav-main{
+.nav-main {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -8,7 +8,7 @@
     margin-block-end: 55px;
 }
 
-.nav-main-ar{
+.nav-main-ar {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -19,7 +19,7 @@
 }
 
 
-.logo-container{
+.logo-container {
     height: 2.2rem;
     padding: 5px;
     display: flex;
@@ -27,26 +27,29 @@
     align-items: flex-start;
     justify-content: flex-start;
     margin: 15px;
-    width: 45%;
+    width: 25%;
 }
-.logo-container .logo-text{
+
+.logo-container .logo-text {
     background: none;
     color: var(--main-text);
     font-size: xx-large;
     font-family: var(--en-font);
 }
-.logo-container .logo-text span{
+
+.logo-container .logo-text span {
     background: none;
     color: var(--secondry-BG);
 }
 
-.logo-container img{
+.logo-container img {
     width: 45px;
     height: 45px;
 
 }
 
-.nav-main-ar .list-container,.nav-main .list-container{
+.nav-main-ar .list-container,
+.nav-main .list-container {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -54,11 +57,11 @@
     width: 55%;
 }
 
-.nav-main-ar .list-container{
+.nav-main-ar .list-container {
     direction: rtl;
 }
 
-.list-container .headers-list{
+.list-container .headers-list {
     width: 100%;
     list-style: none;
     display: flex;
@@ -71,66 +74,157 @@
 
 
 
-.list-container .headers-list a:hover{
+.list-container .headers-list a:hover {
     color: var(--secondry-BG);
-    
+
 }
 
-.list-container .headers-list a{
+.list-container .headers-list a {
     font-weight: bold;
     cursor: pointer;
-    font-size: large;
+    font-size: medium;
     text-decoration: none;
     color: var(--main-text);
 
-} 
+}
 
-.list-container .headers-list .main-btn,.list-container .headers-list .main-btn-ar{
+.list-container .headers-list .main-btn,
+.list-container .headers-list .main-btn-ar {
     padding: 5px;
     width: 120px;
     cursor: pointer;
     color: var(--main-BG);
 }
 
-.lang-list{
-    width: 5%;
-    height: 25px;
+.lang-list {
+    margin-block-start: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
-.lang-list .lang{
+
+.lang-list .menu {
+    font-size: 25px;
+    background: none;
+    margin-inline-end: 15px;
+    cursor: pointer;
+    display: none;
+    color: var(--secondry-BG);
+}
+
+.nav-menu {
+    background-color: var(--secondry-BG);
+    width: 180px;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right:-100%;
+    transition: 850ms;
+}
+
+.nav-menu.active {
+    right: 0%;
+    transition: 350ms;
+}
+
+.nav-text {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 8px 0 8px 16px;
+    list-style: none;
+    height: 60px;
+}
+
+.nav-text a {
+    text-decoration: none;
+    color: var(--main-BG);
+    font-size: 18px;
+    width: 95%;
+    height: 100%;
+    align-items: center;
+    padding: 0 16px;
+    border-radius: 4px;
+
+}
+
+.nav-menu-items{
+    background-color: var(--secondry-BG);
+}
+
+.navbar-toggle{
+    
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    font-size: 28px;
+}
+
+.navbar-toggle a{
+    color: var(--main-BG);
+}
+
+.nav-menu-items span{
+    margin-inline-start: 16px;
+}
+
+.lang-list .lang {
     width: 25px;
     height: 100%;
-    margin-block-start: 5px;
+    margin-block-start: 15px;
     cursor: pointer;
+    margin-inline-end: 20px;
 }
 
 @media only screen and (max-width: 1300px) {
-    .logo-container{
+    .logo-container {
         width: 30%;
     }
-    .logo-container img{
+
+    .logo-container img {
         width: 30px;
         height: 30px;
     }
+
     .logo-container .logo-text {
         font-size: large;
     }
-    .nav-main .list-container,.nav-main-ar .list-container{
+
+    .nav-main .list-container,
+    .nav-main-ar .list-container {
         width: 60%;
     }
-    .nav-main .list-container .headers-list a,.nav-main-ar .list-container .headers-list a{
+
+    .nav-main .list-container .headers-list a,
+    .nav-main-ar .list-container .headers-list a {
         font-size: small;
     }
-    
 }
 
 
 
-@media only screen and (max-width:750px)  {
-        .nav-main .list-container,.nav-main-ar .list-container{
-            display: none;
-        }
-        
-        .lang-list .lang{
-            margin-block-start: 0;
-        }
+@media only screen and (max-width:750px) {
+
+    .nav-main .list-container,
+    .nav-main-ar .list-container {
+        display: none;
+    }
+
+    .lang-list .lang {
+        margin-block-start: 0;
+    }
+
+    .list-container .contact {
+        display: none;
+    }
+
+    .lang-list .menu {
+        display: block;
+    }
 }

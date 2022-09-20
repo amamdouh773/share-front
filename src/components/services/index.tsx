@@ -27,7 +27,7 @@ const Services = () => {
         <div className={lang ? "services-container-ar":"services-container"}>
             <h3 className="services-header">{t("services")}</h3>
             <div className="cards-container">
-                {data?.data.services.map((serv,i)=><Card name={t(serv.name)} key={i} icon={serv.logo} />)}
+                {data?.data.services.map((serv,i)=><Card name={t(serv.name)} key={i} icon={serv.logo}/>)}
             </div>
         </div>
     )
