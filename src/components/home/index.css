@@ -67,7 +67,7 @@
     .description-container .main-btn,
     .description-container .main-btn-ar{
         font-size: small;
-}
+    }
 }
 
 @media only screen and (max-width:750px) {

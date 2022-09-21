@@ -46,8 +46,9 @@
 }
 
 
-img,h1,h2,h3,h4,li,a,svg,span{
+img,h1,h2,h3,h4,li,a,svg,span,p,ul,div{
   background: transparent;
+  list-style: none;
 }
 
 body {

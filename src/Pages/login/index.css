@@ -1,0 +1,213 @@
+.login,.login-ar{
+    width: 80%;
+    height: 80vh;
+    margin-block-end: 55px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-inline: 150px;
+    box-shadow: 10px 10px 15px #e3e3e3;
+}
+
+.login{
+    font-family: var(--en-font);
+    font-size: small;
+    direction: ltr;
+}
+
+.login-ar{
+    font-family: var(--ar-font);
+    direction: rtl;
+}
+
+.info{
+    background-color: var(--secondry-BG);
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--main-BG);
+}
+
+.login .info{
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.login-ar .info{
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.info .info-icon{
+    width: 100px;
+    height: 100px;
+    margin-block-end: 15px;
+    margin-block-start: 25px;
+}
+.info .info-title{
+    font-size: xx-large;
+    border-bottom: 2px solid var(--main-BG);
+    margin-block-end: 15px;
+}
+
+.info .info-desc{
+    font-size: larger;
+    margin-block-end: 100px;
+    margin-inline: 15px;
+    font-weight: lighter;
+}
+.info .info-list{
+    font-size: small;
+    align-self: flex-start;
+    justify-self: flex-start;
+    margin-block-end: 25px;
+    margin-inline-start: 55px;
+}
+
+.info .info-list .list-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-block-end: 15px;
+}
+
+.info .info-list .list-item svg{
+    font-size: 15px;
+}
+
+.info .info-list .list-item span{
+    margin-inline-start: 15px;
+    font-size: small;
+}
+
+.actions{
+    background-color: #fff;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login .actions{
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.login-ar .actions{
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.actions .actions-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-inline: 80px;
+    margin-block-end: 25px;
+}
+
+.actions .actions-title h1{
+    margin-block-end: 3px;
+    color: var(--secondry-BG);
+}
+
+.actions .actions-title p{
+    margin-block-end: 25px;
+    color: #bbb5b5;
+}
+
+.actions .actions-title p a{
+    color: var(--secondry-BG);
+    margin-inline-start: 5px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-inline: 50px;
+    width: 80%;
+}
+
+.login-form .form-input{
+    border: none;
+    background: none;
+    width: 100%;
+    border-bottom: 2px solid var(--secondry-BG);
+    font-size: larger;
+    margin-block-end: 55px;
+    outline: none;
+}
+
+.login-form .main-btn{
+    width: 150px;
+    padding: 5px;
+
+}
+
+form{
+    background: transparent;
+}
+
+@media only screen and (max-width: 750px) {
+    .login,.login-ar{
+        margin-inline: 50px;
+        height: 50vh;
+    }
+    .info .info-icon{
+        width: 40px;
+        height: 40px;
+        margin-block-end: 15px;
+        margin-block-start: 35px;
+    }
+    .info .info-title{
+        font-size: medium;
+        margin-block-end: 15px;
+    }
+    .info .info-desc{
+        font-size: x-small;
+        margin-block-end: 35px;
+    }
+
+    .info .info-list{
+        margin-inline-start: 15px;
+    }
+    .info .info-list .list-item span{
+        margin-inline-start: 5px;
+        margin-inline-end: 5px;
+        font-size: small;
+        font-family: var(--ar-font);
+        text-align: start;
+        width: 125px;
+    }
+    .info .info-list .list-item svg{
+        font-size: 5px;
+    }
+    .actions .actions-title{
+        margin-inline: 0;
+        margin-block: 0;
+    }
+
+    .actions .actions-title h1{
+        font-size: medium;
+    }
+    .actions .actions-title p{
+        font-size: xx-small;
+    }
+    .login-form .form-input{
+        font-size: x-small;
+        margin-block-end: 25px;
+    }
+    .login-form .main-btn{
+        width: 100px;
+        font-size: x-small;
+    }
+}

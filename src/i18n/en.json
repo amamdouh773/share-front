@@ -23,5 +23,13 @@
   "message":"message",
   "home-text":"Marketing is not just an ad or targeting audience, online marketing in egypt became a huge market. If you aim to success in this market there are some key factors, the most important factor is to have a good media buyer to study your opponents and make a good marketing plan, and deliver you to the right customer. Contact us and we will increase your online marketing revenue ",
   "login": "Login",
-  "web-dev":"Web Development & Design"
+  "web-dev":"Web Development & Design",
+  "login-welcome":"Welcome",
+  "login-desc":"Your guide to social advertising and other services",
+  "login-info-item-1":"Design creative Ad",
+  "login-info-item-2": "Promote your work and products in a better way",
+  "login-info-item-3": "Reaching a bigger number of customers",
+  "no-acc":"You dont have account, Please ",
+  "input-name":"Please Enter Username",
+  "input-pass":"Please Enter Password"
 }

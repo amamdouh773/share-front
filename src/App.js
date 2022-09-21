@@ -7,6 +7,8 @@ import Contact from './components/contact-us/index.tsx';
 import Footer from './components/footer/index.tsx';
 import ServicesPage from './Pages/services-page/index.tsx';
 import { langContext } from "./helper/context.js"
+import WorkPage from './Pages/work-page/index.tsx';
+import LoginPage from './Pages/login/index.tsx';
 import { useState } from 'react';
 import { QueryClient, QueryClientProvider } from "react-query"
 import {
@@ -14,7 +16,6 @@ import {
   Switch,
   Route
 } from "react-router-dom"
-import WorkPage from './Pages/work-page/index.tsx';
 function App() {
   const [lang, setLang] = useState(true)
   const queryClient = new QueryClient()
@@ -39,6 +40,9 @@ function App() {
               </Route>
               <Route path="/contact" >
                 <Contact />
+              </Route>
+              <Route path="/login">
+                <LoginPage />
               </Route>
             </Switch>
             <Footer />

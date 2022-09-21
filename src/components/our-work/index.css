@@ -25,5 +25,6 @@
 @media only screen and (max-width:750px) {
     .work-container h3{
         font-size: large;
+        width: 30%;
     }
 }

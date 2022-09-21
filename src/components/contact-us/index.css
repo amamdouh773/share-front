@@ -117,8 +117,39 @@
 }
 
 
-@media only screen and (max-width:1300px) {
+ @media only screen and (max-width:1300px) {
     .contact-container,.contact-container-ar{
-        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
-}
+    .text-container{
+        width: 70%;
+        margin-inline: 70px;
+        margin-block-end: 20px;
+    }
+    .text-container .header{
+        font-size: large;
+        
+    }
+    .text-container p{
+        font-size: medium;
+    }
+    .form-container{    
+        width: 100%;
+        margin-inline-end: 0px;
+        margin-inline-start: 0px;
+        align-items: center;
+        justify-content: center;
+    }
+    .form-container .form-element {
+        margin-block-end: 30px;
+        flex-direction: column;
+    }
+    .form-container .form-element .form-label{
+        margin-block-end: 5px;
+    }
+    .form-container .main-btn,.form-container .main-btn-ar{
+        margin-inline-start: 0;
+    }
+} 

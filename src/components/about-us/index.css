@@ -1,7 +1,7 @@
 .about-container{
     width: 80%;
     background-color: var(--secondry-BG);
-    margin-block-end: 55px;
+    margin-block-end: 110px;
     margin-inline-start: 200px;
     display: flex;
     flex-direction: column;

@@ -68,8 +68,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin-inline-end: 25px;
-    margin-block-start: 10px;
+    margin-inline: 25px;
+    margin-block-start: 25px;
 }
 
 
@@ -94,6 +94,7 @@
     width: 120px;
     cursor: pointer;
     color: var(--main-BG);
+    display: none;
 }
 
 .lang-list {
@@ -123,6 +124,7 @@
     top: 0;
     right:-100%;
     transition: 850ms;
+    z-index: 5;
 }
 
 .nav-menu.active {
