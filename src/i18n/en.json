@@ -31,5 +31,6 @@
   "login-info-item-3": "Reaching a bigger number of customers",
   "no-acc":"You dont have account, Please ",
   "input-name":"Please Enter Username",
-  "input-pass":"Please Enter Password"
+  "input-pass":"Please Enter Password",
+  "customers":"Customers"
 }

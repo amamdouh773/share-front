@@ -21,12 +21,13 @@ const WorkPage = () => {
 
     if (isLoading) return <h1>Loading..</h1>
     if (error) return <h1>error</h1>
-    console.log(data?.data.companies)
     return (
         <div className="work">
-            <h3 className={lang ? "work-header-ar" : "work-header"}>{t("work")}</h3>
+            <h3 className={lang ? "work-header-ar" : "work-header"}>{t("customers")}</h3>
             <div className="work-cards">
-                {data?.data.companies.map((company, i) => <Card name={company.name} icon={company.logo} />)}
+                {data?.data.companies.map((company, i) =>
+                    <Card name={company.name} icon={company.logo} key={i} />
+                )}
             </div>
         </div>
     )

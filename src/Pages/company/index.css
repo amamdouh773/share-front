@@ -1,0 +1,12 @@
+.company,.company-ar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--en-font);
+}
+
+.company-ar{
+    font-family: var(--ar-font);
+}
+

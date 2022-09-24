@@ -28,7 +28,7 @@ const Nav = () => {
                     <Link to="/" >{t("home")}</Link>
                     <Link to="/about">{t("about")}</Link>
                     <Link to="/services">{t("services")}</Link>
-                    <Link to="/work">{t("work")}</Link>
+                    <Link to="/work">{t("customers")}</Link>
                     <Link className="contact" to="/contact">{t("contact")}</Link>
                     <Link to="/login" className={lang ? "main-btn-ar" : "main-btn"}>{t("login")}</Link>
                 </ul>

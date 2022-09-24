@@ -9,6 +9,7 @@ import ServicesPage from './Pages/services-page/index.tsx';
 import { langContext } from "./helper/context.js"
 import WorkPage from './Pages/work-page/index.tsx';
 import LoginPage from './Pages/login/index.tsx';
+import Company from './Pages/company/index.tsx';
 import { useState } from 'react';
 import { QueryClient, QueryClientProvider } from "react-query"
 import {
@@ -43,6 +44,9 @@ function App() {
               </Route>
               <Route path="/login">
                 <LoginPage />
+              </Route>
+              <Route path="/company/:id" children={<Company/>} >
+                <Company />
               </Route>
             </Switch>
             <Footer />
