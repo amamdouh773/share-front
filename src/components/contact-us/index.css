@@ -149,6 +149,9 @@
     .form-container .form-element .form-label{
         margin-block-end: 5px;
     }
+    .form-container .form-element .form-input{
+        width: 300px;
+    }
     .form-container .main-btn,.form-container .main-btn-ar{
         margin-inline-start: 0;
     }
