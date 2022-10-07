@@ -1,6 +1,8 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react"
 import './index.css'
 import { useQuery } from "react-query"
+import Loading from "../../components/loading/index.tsx"
+
 import axios from "axios"
 import { Link } from "react-router-dom"
 const Slider = () => {
@@ -38,7 +40,7 @@ const Slider = () => {
         return () => clearInterval(intervalId)
     }, [next])
 
-    if (isLoading) return <h1>Loading</h1>
+    if (isLoading) return <Loading />
     if (error) return <h1>Error</h1>
 
 

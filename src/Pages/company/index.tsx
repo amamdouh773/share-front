@@ -4,6 +4,7 @@ import { useQuery } from "react-query"
 import axios from "axios"
 import Cover from "../../components/company-cover/index.tsx"
 import "./index.css"
+import Loading from "../../components/loading/index.tsx"
 import { useTranslation } from "react-i18next"
 import { langContext } from "../../helper/context"
 import ServiceCard from "../../components/company-service-card/index.tsx"
@@ -22,7 +23,7 @@ const Company = () => {
             }
         )
     )
-    if(isLoading) return <h1>Loading...</h1>
+    if(isLoading) return <Loading />
     if(error) return <h1>Error</h1>
     console.log(data?.data.company)
     return (

@@ -2,6 +2,8 @@ import React from "react"
 import Card from "../card/index.tsx"
 import { langContext } from "../../helper/context"
 import './index.css'
+import Loading from "../../components/loading/index.tsx"
+
 import { useContext } from "react"
 import { useTranslation } from "react-i18next"
 import {useQuery} from "react-query"
@@ -21,7 +23,7 @@ const Services = () => {
         )
     )
     
-    if(isLoading) return <h1>loading...</h1>
+    if(isLoading) return <Loading />
     if(error) return <h1>Error Try again</h1>
     return (
         <div className={lang ? "services-container-ar":"services-container"}>

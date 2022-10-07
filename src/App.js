@@ -23,7 +23,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <Router>
-        <div className="App">
+        <div className='App'>
           <langContext.Provider value={{ lang, setLang }}>
             <Nav />
             <Switch>
@@ -45,7 +45,7 @@ function App() {
               <Route path="/login">
                 <LoginPage />
               </Route>
-              <Route path="/company/:id" children={<Company/>} >
+              <Route path="/company/:id" children={<Company />} >
                 <Company />
               </Route>
             </Switch>

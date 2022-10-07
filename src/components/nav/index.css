@@ -94,7 +94,6 @@
     width: 120px;
     cursor: pointer;
     color: var(--main-BG);
-    display: none;
 }
 
 .lang-list {

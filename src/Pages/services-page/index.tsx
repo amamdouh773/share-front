@@ -2,6 +2,7 @@ import React, { useContext } from "react"
 import { useTranslation } from "react-i18next"
 import { langContext } from "../../helper/context"
 import Card from "../../components/card/index.tsx"
+import Loading from "../../components/loading/index.tsx"
 import { useQuery } from "react-query"
 import axios from "axios"
 import "./index.css"
@@ -19,7 +20,7 @@ const ServicesPage = () =>{
         )
     )
     
-    if(isLoading) return <h1>loading...</h1>
+    if(isLoading) return <Loading />
     if(error) return <h1>Error Try again</h1>
     console.log(data)
     return (

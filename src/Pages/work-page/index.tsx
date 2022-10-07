@@ -3,6 +3,7 @@ import { useQuery } from "react-query"
 import axios from "axios"
 import Card from "../../components/card/index.tsx"
 import "./index.css"
+import Loading from "../../components/loading/index.tsx"
 import { langContext } from "../../helper/context";
 import { useTranslation } from "react-i18next";
 const WorkPage = () => {
@@ -19,7 +20,7 @@ const WorkPage = () => {
         )
     )
 
-    if (isLoading) return <h1>Loading..</h1>
+    if (isLoading) return <Loading />
     if (error) return <h1>error</h1>
     return (
         <div className="work">

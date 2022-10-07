@@ -1,6 +1,28 @@
 .main-container{
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
+.main-container .phone{
+    position: sticky;
+    bottom: 15px;
+    left: 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #39d139;
+    display: flex;
+    color: var(--main-BG);
+    font-size: 18px;
+    align-items: center;
+    justify-content: center;
+    margin-block-end: 15px;
+    display: none;
+}
 
+@media only screen and (max-width:750px) {
+    .main-container .phone{
+        display: flex;
+    }
+}
