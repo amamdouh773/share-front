@@ -6,6 +6,7 @@
     box-shadow: 5px 5px 5px #dad9d988;
     font-family: var(--en-font);
     margin-block-end: 55px;
+    background-color: var(--secondry-BG);
 }
 
 .nav-main-ar {
@@ -16,6 +17,8 @@
     box-shadow: 5px 5px 5px #dad9d988;
     font-family: var(--ar-font);
     margin-block-end: 55px;
+    background-color: var(--secondry-BG);
+
 }
 
 
@@ -32,19 +35,20 @@
 
 .logo-container .logo-text {
     background: none;
-    color: var(--main-text);
+    color: var(--main-BG);
     font-size: xx-large;
     font-family: var(--en-font);
 }
 
 .logo-container .logo-text span {
     background: none;
-    color: var(--secondry-BG);
+    color: var(--secondry-color);
 }
 
 .logo-container img {
     width: 45px;
     height: 45px;
+    cursor: default;
 
 }
 
@@ -75,7 +79,7 @@
 
 
 .list-container .headers-list a:hover {
-    color: var(--secondry-BG);
+    color: var(--secondry-color);
 
 }
 
@@ -84,7 +88,7 @@
     cursor: pointer;
     font-size: medium;
     text-decoration: none;
-    color: var(--main-text);
+    color: var(--main-BG);
 
 }
 
@@ -110,7 +114,7 @@
     margin-inline-end: 15px;
     cursor: pointer;
     display: none;
-    color: var(--secondry-BG);
+    color: var(--main-BG);
 }
 
 .nav-menu {

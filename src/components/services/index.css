@@ -13,10 +13,10 @@
 }
 
 .services-header{
-    color: var(--secondry-BG);
+    color: var(--secondry-color);
     font-size: x-large;
     margin-block-end: 35px;
-    border: 3px solid var(--secondry-BG);
+    border: 3px solid var(--secondry-color);
     padding: 10px;
     border-radius: 30px;
     width: 20%;

@@ -1,7 +1,7 @@
 .card-container{
    width: 25%;
    height: 200px;
-    background-color: var(--secondry-BG);
+    background-color: #e00885;
     border-radius: 15px;
     margin-inline: 30px;
     margin-block-end: 45px;
@@ -9,7 +9,6 @@
 
 }
 .card-container .icon{
-    background-color: var(--secondry-BG);
     width: 70px;
     height: 70px;
     cursor: default;

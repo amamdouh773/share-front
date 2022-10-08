@@ -71,7 +71,7 @@
 }
 
 .form-container .form-element .form-label {
-    color: var(--secondry-BG);
+    color: var(--secondry-color);
     margin-inline-end: 15px;
     font-size: x-large;
     min-width: 150px;
@@ -84,7 +84,7 @@
 .form-container .form-element .form-input {
     width: 350px;
     height: 35px;
-    border: 1px solid var(--secondry-BG);
+    border: 1px solid var(--secondry-color);
     border-radius: 7px;
     margin-inline-start: 15px;
     outline: none;

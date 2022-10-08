@@ -17,7 +17,8 @@
 
 :root {
   --main-BG: #F0F0F0;
-  --secondry-BG: #0099E5;
+  --secondry-BG: #403092;
+  --secondry-color: #e00885;
   --main-text: #100F0F;
   --en-font: 'nexa';
   --ar-font: 'ar-font';
@@ -26,8 +27,8 @@
 
 .main-btn,.main-btn-ar{
   background: none;
-  background-color: var(--secondry-BG);
-  border:2px solid var(--secondry-BG);
+  background-color: var(--secondry-color);
+  border:2px solid var(--secondry-color);
   color: var(--main-BG);
   border-radius: 3px;
   cursor: pointer;
@@ -41,8 +42,8 @@
 
 
 .main-btn:hover,.main-btn-ar:hover{
+  color: var(--secondry-color);
   background-color: var(--main-BG);
-  color: var(--secondry-BG);
 }
 
 

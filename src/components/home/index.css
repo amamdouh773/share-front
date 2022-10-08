@@ -33,7 +33,7 @@
 .description-container .description,.description-container .description-ar{
     background: transparent;
     font-size: x-large;
-    color: var(--secondry-BG);
+    color: var(--secondry-color);
     line-height: 2.1;
     font-family: var(--ar-font);
     margin-block-end: 15px;
