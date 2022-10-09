@@ -10,7 +10,7 @@ const About = () => {
         <div className="about-container">
             <div className="circle"><h3 className={lang ? "container-header-ar" : "container-header"}>{t("about")}</h3>
             </div>
-            <iframe className="video" src="https://www.youtube.com/embed/AM5n1E68WrI" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+            <iframe className="video" src="https://www.youtube.com/embed/AM5n1E68WrI" title="YouTube video player" frameBorder="0" allowFullScreen />
         </div>
     )
 }
